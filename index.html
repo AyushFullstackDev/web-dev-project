@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://www.creativefabrica.com/wp-content/uploads/2022/02/21/ab-letter-typography-vector-logo-design-Graphics-25677286-1.jpg" type="image/x-icon">
+    <title>Ayush Bhange</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: "Nunito Sans", sans-serif;
+      }
+
+      :root {
+        --bg-color: #482882da;
+        --snd-bg-color: #262840;
+        --text-color: #fff;
+        --main-color: #f47059;
+      }
+
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+      }
+
+      body {
+        background-image: url(https://wallpapercosmos.com/w/full/1/d/6/1195234-3840x2160-desktop-4k-geometric-abstract-background-photo.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: var(--text-color);
+      }
+
+      section {
+        min-height: 100vh;
+        padding: 10rem 9% 2rem;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 11, 27, 0.702);
+        padding: 2rem 9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        backdrop-filter: blur(calc(7px));
+      }
+
+      .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--text-color);
+        cursor: default;
+      }
+
+      .navbar a {
+        font-size: 2rem;
+        color: var(--text-color);
+        margin-left: 4rem;
+        font-weight: 700;
+      }
+
+      .navbar a:hover,
+      .navbar a.active {
+        color: var(--text-color);
+      }
+
+      #menu-icon {
+        font-size: 3.6rem;
+        color: var(--text-color);
+        display: none;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--main-color);
+        color: var(--text-color);
+        border-radius: 5px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: darken(var(--main-color), 10%);
+      }
+
+      .home-content {
+        text-align: left;
+        margin-top: 5rem;
+      }
+
+      .social-media a {
+        color: var(--text-color);
+        font-size: 2rem;
+        margin: 0 1rem;
+      }
+
+      .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .home-content h3 {
+        font-size: 3.2rem;
+        font-weight: 700;
+      }
+
+      .home-content h3:nth-of-type(2) {
+        margin-bottom: 2rem;
+      }
+
+      span {
+        color: var(--main-color);
+      }
+
+      .home-content h1 {
+        font-size: 5.6rem;
+        font-size: 700;
+        line-height: 1.3;
+      }
+
+      .home-img img {
+        width: 25vm;
+        height: auto;
+        max-width: 400px;
+        animation: floatImage 4s ease-in-out infinite;
+        border-radius: 2000%;
+      }
+
+      @keyframes floatImage {
+        0% {
+          transform: translateY(10);
+        }
+
+        50% {
+          transform: translateY(-2.4rem);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .home-content p {
+        font-size: 1.6rem;
+      }
+
+      .social-media a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background: transparent;
+        border: 0.2rem solid var(--main-color);
+        border-radius: 20px;
+        font-size: 2rem;
+        color: var(--main-color);
+        margin: 3rem 1.5rem 3rem 0;
+        transition: 0.5s ease;
+      }
+
+      .social-media a:hover {
+        background: var(--main-color);
+        color: var(--snd-bg-color);
+        box-shadow: 0 0 1rem var(--main-color);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1rem 2.8rem;
+        background: var(--main-color);
+        border: 0.2rem solid var(--main-color);
+        border-radius: 4rem;
+        box-shadow: 0 0 1rem var(--main-color);
+        font-size: 1.6rem;
+        color: var(--text-color);
+        letter-spacing: 0.3rem;
+        font-weight: 600;
+        transition: 0.5s ease;
+      }
+
+      .btn:hover {
+        box-shadow: none;
+      }
+
+      .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background: rgba(39, 14, 64, 0.346);
+      }
+
+      .about-img img {
+        width: 35vw;
+        box-shadow: 10px 10px 10px #4103989c;
+      }
+
+      .about-content h2 {
+        text-align: left;
+        line-height: 1.2;
+        font-size: 4rem;
+        padding: 20px;
+      }
+
+      .about-content h3 {
+        font-size: 2.6rem;
+      }
+
+      .about-content p {
+        font-size: 1.6rem;
+        margin: 2rem 0 3rem;
+      }
+
+      .about-img img {
+        border-radius: 20px;
+        width: 25vm;
+        height: auto;
+        max-width: 400px;
+      }
+      .projects {
+        background: rgba(51, 4, 65, 0);
+      }
+
+      .projects h2 {
+        font-size: 6rem;
+        margin-bottom: 4rem;
+      }
+
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+      }
+
+      .projects-container .projects-box {
+        position: relative;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem var(--bg-color);
+        overflow: hidden;
+        display: flex;
+      }
+
+      .projects-box img {
+        width: 100%;
+        transition: 0.5s ease;
+        opacity: 0.7;
+      }
+
+      .projects-box:hover img {
+        transform: scale(1.1);
+      }
+
+      .projects-box .projects-layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.39);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transform: translateY(100%);
+        transition: 0.5s ease;
+        opacity: 0;
+      }
+
+      .projects-box:hover .projects-layer {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .projects-layer h4 {
+        font-size: 2.6rem;
+        font-weight: 700;
+      }
+
+      .projects-layer p {
+        font-size: 1.6rem;
+        margin: 1rem 0 2rem;
+      }
+
+      .contact form {
+        display: flex;
+        flex-direction: column;
+      }
+      .projects-layer a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        background: var(--text-color);
+        border-radius: 50%;
+      }
+
+      .projects-layer a i {
+        font-size: 2rem;
+        color: var(--snd-bg-color);
+      }
+
+      .contact form input,
+      .contact form textarea {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        background-color: var(--snd-bg-color);
+      }
+
+      .contact form textarea {
+        resize: none;
+        height: 150px;
+        background-color: var(--snd-bg-color);
+      }
+
+      .contact form .btn {
+        width: fit-content;
+        align-self: center;
+      }
+      /* Contact section styles */
+      .contact-card {
+        background-color: #3333334f;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: auto;
+        font-size: 20px;
+        margin: 2px auto;
+      }
+
+      .contact-card h2 {
+        margin-bottom: 20px;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .info-item i {
+        color: #ffffff;
+        margin-right: 10px;
+        font-size: 1.2em;
+      }
+
+      .info-item p {
+        margin: 0;
+      }
+
+      footer {
+        padding: 2rem;
+        text-align: center;
+        background: var(--snd-bg-color);
+        color: var(--text-color);
+      }
+
+      /* Responsive styles */
+      @media (min-width: 300px) and (max-width: 450) {
+        html {
+          font-size: 55%;
+        }
+      }
+
+      @media (max-width: 992px) {
+        html {
+          font-size: 50%;
+        }
+
+        .about,
+        .home {
+          flex-direction: column;
+          font-size: 60px;
+        }
+
+        .about-img img {
+          width: 100%;
+        }
+
+        .services-container {
+          flex-direction: column;
+        }
+
+        .projects-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        #menu-icon {
+          display: block;
+        }
+
+        .navbar {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: rgba(15, 11, 27, 0.702);
+          backdrop-filter: blur(calc(7px));
+          z-index: 99;
+        }
+
+        .navbar.active {
+          display: flex;
+        }
+
+        .navbar a {
+          margin: 1rem 0;
+          padding: 1rem;
+          text-align: center;
+          width: 100%;
+        }
+
+        .about-content h2 {
+          font-size: 3rem;
+        }
+
+        .projects-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .home-content h1 {
+          font-size: 4rem;
+        }
+
+        .about-content h2 {
+          font-size: 2.5rem;
+        }
+
+        .projects h2 {
+          font-size: 4rem;
+        }
+      }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo" >Ayush</div>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div id="menu-icon" class='bx bx-menu'></div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Welcome to my Portfolio</h3>
+        <h3><span class="multiple-text"></span></h3>
+        <h3 style="font-size: 30px;">I am </h3>
+        <h1 style="font-size: 80px;">Ayush Bhange</h1>
+        <a href="https://drive.google.com/file/d/1WqiIcDMn49SlFWeBX_PNmXBwUsIM1RHS/view?usp=sharing" class="btn">Resume
+        </a>
+
+      </div>
+      <div class="home-img">
+        <img
+          src="Home.png"alt="Home Image"
+        />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img
+          src="1.jpg"
+          alt="About Image"
+        />
+      </div>
+      <div class="about-content">
+        <h2>About Us</h2>
+        <h3>We are passionate about web development</h3>
+        <p>
+Developed a responsive calculator web application using HTML5, CSS3, and JavaScript. Implemented interactive UI with custom styling and mobile-first design principles. Demonstrated proficiency in frontend technologies, DOM manipulation, and event handling. Applied best practices in code organization, responsive design, and user experience.
+        </p>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <h2>Our Projects</h2>
+      <div class="projects-container">
+        <div class="projects-box">
+          <a href="calci.html">
+            <img
+              src="https://wallpapers.com/images/hd/calculator-1920-x-1920-background-mmnw3eszdqy2jkjd.jpg"
+              alt="Project Image" style="background-size: cover;"
+            />
+            <div class="projects-layer">
+              <p><h1 style="font-size: 40px; color: #fff;">Calculator</h1></p>
+            </div></a
+          >
+        </div>
+        <a href="https://www.ijaresm.com/uploaded_files/document_file/Ayush_Bhanges7hE.pdf">
+        <div class="projects-box">
+          <img src="https://cdn.thetorocompany.com/api/assetstorage/623_daa4d690-4431-4114-b229-7a562de833b4/Medium" alt="Project Image" />
+          <div class="projects-layer">
+            <h4  style="color: #fff; font-size: 40px;">Smart Irrigation System Using IoT</h4>
+            <p  style="color: #fff; ">Its Final Year Project</p>
+          </div>
+        </div></a>
+        <div class="projects-box">
+         <a href="newpro.html">
+          <img src="https://lh6.googleusercontent.com/proxy/orZsgD48D4MIS_O7DMkX-S8ujcHU5NAYvs0CkOWjz4q3XuOGyFls0ctU4mbFl0YiwgoQc24DUtZir2ZH_CY_aegx1Yz5MHdDCkrEpTr6_NkZ9sd1JFQZ0L1R9hoeoTRgy025VL9-iw" alt="Project Image">
+          <div class="projects-layer">
+            <h4 style="color: #fff; font-size: 40px;">Sample Portfolio</h4>
+            <p style="color: #fff; ">Its project is developed in HTML CSS and Javascript by used for practice.</p>
+          </div>
+         </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" />
+        <input type="email" name="email" placeholder="Your Email" />
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-card">
+            <div class="contact-info">
+              <a>
+                <div class="info-item">
+                    <i class='bx bx-current-location'></i>
+                    <p>Katol, Maharashtra- 441302</p>
+                  </div>
+              </a>
+              <a onclick="copyPhone()">
+                <div class="info-item" >
+                    <i class='bx bxs-phone'></i>
+                    <p>+91 9373631207</p>
+                  </div>
+              </a>
+              <a href="https://www.linkedin.com/in/ayush-bhange-403b00228">
+                <div class="info-item" >
+                    <i class='bx bxl-linkedin'></i>
+                    <p style="font-size: 20px; color: #fff;">LinkedIn</p>
+                  </div>
+              </a>
+              <a onclick="copyEmail()">
+                <div class="info-item">
+                    <i class='bx bxl-gmail'></i>
+                    <p>ayushbhange@yahoo.com</p>
+                  </div>
+                </a>
+              <a href="https://github.com/AyushFullstackDev">
+                <div class="info-item">
+                    <i class='bx bxl-github'></i>
+                    <p style="font-size: 20px; color: #fff;" >Github</p>
+                  </div>
+              </a>
+              <a href="https://join.skype.com/invite/tht1p0EuwToJ">
+                <div class="info-item">
+                    <i class='bx bxl-skype'></i>
+                    <p style="font-size: 20px; color: #fff;">Join skype</p>
+                  </div>
+              </a>
+            </div>
+      <p style="font-size: 10px;">&copy; ayushbhange 2024 . All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById("menu-icon").onclick = function () {
+      document.querySelector(".navbar").classList.toggle("active");
+    };
+
+    // JavaScript to close the navbar when clicking outside
+    document.addEventListener("click", function (event) {
+      var isClickInsideNavbar = document
+        .querySelector(".navbar")
+        .contains(event.target);
+      var isClickInsideMenuIcon = document
+        .querySelector("#menu-icon")
+        .contains(event.target);
+      document.addEventListener("click", function (event) {
+        const isClickInsideNavbar = event.target.closest(".navbar") !== null;
+        const isClickInsideMenuIcon =
+          event.target.closest("#menu-icon") !== null;
+
+        if (!isClickInsideNavbar && !isClickInsideMenuIcon) {
+          document.querySelector(".navbar").classList.remove("active");
+        }
+      });
+    });
+
+      document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+
+      form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = form.elements.name.value.trim();
+      const email = form.elements.email.value.trim();
+      const message = form.elements.message.value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        alert('bhangeayush963@gmail.com');
+        return;
+      }
+
+      // Here you would typically send the form data to a server
+        console.log('Form submitted:', { name, email, message });
+        alert('Thank you for your message. We will get back to you soon!');
+        form.reset();
+        });
+
+       function isValidEmail(email) {
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       return emailRegex.test(email);
+       }
+      });
+
+      function copyEmail() {
+            const email = 'ayushbhange@example.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+            });
+        }
+// phone no copy 
+        function copyPhone() {
+            const email = '9373631207';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Phone No. copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+            });
+        }
+
+        function copySkype() {
+            const email = '9373631207';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Skype Id. copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+            });
+        }
+
+        // Typed.js Initialization
+    const typed = new Typed(".multiple-text", {
+      strings: [
+        "Web Developer",
+        "Web Designer",
+        "Front-end Developer",
+        "Tester",
+        "Quality Assurance",
+        "Project Manager",
+        "FullStackDeveloper",
+      ],
+      typeSpeed: 70,
+      backSpeed: 70,
+      backDelay: 1000,
+      loop: true,
+    });
+
+        
+    </script>
+  </body>
+</html>
